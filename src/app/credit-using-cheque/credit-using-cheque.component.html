@@ -1,0 +1,59 @@
+<h1 style="margin-left: 40%;">Pecunia Bank</h1>
+<div class="jumbotron">
+    <form #creditChequeForm="ngForm" (ngSubmit)="addAccount(creditChequeForm)">
+        <div class="form-group row">
+            <label for="accountId" class="col-sm-2 col-form-label">Transaction AccountId</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control" #accountId="ngModel" id="accountId" name="accountId"  ngModel required>
+              <small id="accountId" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="chequenum" class="col-sm-2 col-form-label">Cheque Number</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control"  #amount="ngModel" id="chequenum" name="chequenum" ngModel required>
+              <small id="chequenum" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chequeAccountNo" class="col-sm-2 col-form-label">Cheque AccountNo</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control"  #amount="ngModel" id="chequeAccountNo" name="chequeAccountNo" ngModel required>
+              <small id="chequeAccountNo" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chequeHolderName" class="col-sm-2 col-form-label">Cheque HolDerName</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control"  #amount="ngModel" id="chequeHolderName" name="chequeHolderName" ngModel required>
+              <small id="chequeHolderName" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chequeBankName" class="col-sm-2 col-form-label">Cheque Bank Name</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control"  #amount="ngModel" id="chequeBankName" name="chequeBankName" ngModel required>
+              <small id="chequeBankName" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chequeIFSC" class="col-sm-2 col-form-label">chequeIFSC</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control"  #amount="ngModel" id="chequeIFSC" name="chequeIFSC" ngModel required>
+              <small id="chequeIFSC" class="form-text text-muted">Please Don't enter any secial character like $,*;@,etc..,</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chequeIssueDate" class="col-sm-2 col-form-label">ChequeIssueDate</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="date" id="chequeIssueDate"  #chequeIssueDate="ngModel" name="chequeIssueDate" class="form-control" ngModel required> 
+            </div>
+          </div>
+          
+
+
+          <button [disabled]="creditChequeForm.form.invalid" class="btn btn-primary">Credit</button>
+        </form>
+    </div>
+
+
